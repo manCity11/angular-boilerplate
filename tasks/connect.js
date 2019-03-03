@@ -1,4 +1,5 @@
 module.exports = () => {
+  const gulp = require("gulp");
   const webpack = require("webpack");
   const WebpackDevServer = require("webpack-dev-server");
   const { port } = require("./build-config");
@@ -14,4 +15,5 @@ module.exports = () => {
     hot: true
   });
   server.listen(port);
+  gulp.watch("src/**/locales/[A-z]*.json", gulp.series("merge-locales"));
 };

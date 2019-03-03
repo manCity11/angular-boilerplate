@@ -7,6 +7,7 @@ module.exports = () => {
   const indexHtml = require("./webpack-loaders/indexHtml")();
   const tsLoader = require("./webpack-loaders/ts-loader")();
   const htmlLoader = require("./webpack-loaders/html-loader")();
+  const styleLoader = require("./webpack-loaders/style-loader")();
 
   let config = {
     mode: isProd ? "production" : "development",
@@ -16,7 +17,7 @@ module.exports = () => {
       filename: "bundle.js"
     },
     module: {
-      rules: [tsLoader, htmlLoader]
+      rules: [tsLoader, htmlLoader, styleLoader]
     },
     resolve: {
       extensions: [".js", ".ts"]
