@@ -1,0 +1,10 @@
+{
+  "extends": ["airbnb", "tslint-eslint-rules"],
+  "rules": {
+    "import/prefer-default-export": "off"
+  },
+  "globals": {
+    "_": true,
+    "document": true
+  }
+}
