@@ -11,7 +11,7 @@ module.exports = {
     appPath: path.resolve(__dirname, "../src"),
     indexHtml: "./src/index.html",
     entries: {
-      app: ["./src/main.ts"]
+      app: "./src/main.ts"
     }
   }
 };
