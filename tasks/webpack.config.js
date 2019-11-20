@@ -12,7 +12,7 @@ module.exports = () => {
     mode: isProd ? "production" : "development",
     entry: src.entries,
     output: {
-      path: path.resolve(__dirname, "../dist"),
+      path: path.resolve(__dirname, "../dist/root"),
       filename: "bundle.js"
     },
     module: {
@@ -23,7 +23,6 @@ module.exports = () => {
     },
     plugins: [
       indexHtml,
-      new webpack.HotModuleReplacementPlugin(),
       new webpack.ProvidePlugin({
         _: "lodash"
       })
